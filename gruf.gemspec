@@ -18,6 +18,7 @@
 $:.push File.expand_path("../lib", __FILE__)
 require 'gruf/version'
 
+original_value = Bundler.settings[:force_ruby_platform]
 Bundler.settings.set_command_option(:force_ruby_platform, true)
 
 Gem::Specification.new do |spec|
@@ -48,3 +49,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'concurrent-ruby', '> 1'
   spec.add_runtime_dependency 'slop', '~> 4.6'
 end
+
+Bundler.settings.set_command_option(:force_ruby_platform, original_value)
