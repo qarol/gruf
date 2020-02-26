@@ -39,8 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'pry', '~> 0.11'
 
-  spec.add_runtime_dependency 'grpc', '~> 1.10'
-  spec.add_runtime_dependency 'grpc-tools', '~> 1.10'
+  spec.add_runtime_dependency 'grpc', '~> 1.10', platforms: ["ruby"]
+  spec.add_runtime_dependency 'grpc-tools', '~> 1.10', platforms: ["ruby"]
   spec.add_runtime_dependency 'activesupport', '> 4'
 
   spec.add_runtime_dependency 'concurrent-ruby', '> 1'
